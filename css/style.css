@@ -29,6 +29,16 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
+#fh5co-header {
+  background-image: url(images/mountain1.jpg);
+  background-size: 110%; /* Increase this value to zoom out further */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 126vh; /* Adjust this value to increase height, e.g., 120vh for taller */
+}
+
+
 .offcanvas #page {
   overflow: hidden;
   position: absolute;
