@@ -29,6 +29,17 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
+
+#fh5co-header {
+  background-image: url(images/mountain1.jpg);
+  background-size: 110%; /* Increase this value to zoom out further */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 126vh; /* Adjust this value to increase height, e.g., 120vh for taller */
+}
+
+
 .offcanvas #page {
   overflow: hidden;
   position: absolute;
@@ -360,6 +371,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-event {
   height: 1150px;
   float: left;
+  margin-bottom: 60px;
 }
 #fh5co-counter .display-t,
 #fh5co-counter .display-tc,
@@ -985,7 +997,7 @@ form label {
 }
 
 .couple-wrap {
-  width: 90%;
+  width: 90;
   margin: 0 auto;
   position: relative;
 }
