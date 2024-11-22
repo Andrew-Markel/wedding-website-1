@@ -6,7 +6,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Andrew & Emma - 8.08.2025</title>
+	<title>Andrew & Emma - 8.8.2025</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--<meta name="description" content="We are getting hitched - The dates are 21st & 29th of October '23 and we would like you to be a part of it." />-->
 	<!--<meta name="keywords" content="shyam,rincy,wedding,website,rsvp" />-->
@@ -22,7 +22,7 @@
     <meta property="og:image:width" content="300">
     <meta property="og:image:height" content="300">
     <!-- Website to visit when clicked in fb or WhatsApp-->
-    <meta property="og:url" content="https://we.shyamjos.com">
+    <meta property="og:url" content="https://www.andrewemma2025.com">
 	<meta property="og:type" content="website"/>
     <meta property="og:image:type" content="image/jpeg">
 
@@ -98,7 +98,7 @@
 							<h1>Andrew &amp; Emma</h1>
 							<br>
 							<img src="images/ae_monogram.png" alt="Andrew + Emma" style="width: 20%; height: auto;"> 
-							<h2 style="font-size: 2.2em;">8.08.2025</h2>
+							<h2 style="font-size: 2.2em;">8.8.2025</h2>
 							<h2 style="font-size: 2em;">"Let all that you do be done in love." <br>1 Corinthians 16:14</h2>
 							<div class="flipTimebox">
 								<div class="clock clock-fix"></div>
@@ -337,7 +337,7 @@
 								</p>
 							</div>
 							<div>
-								<form id="rsvp-form" class="rsvp-form animate-box bottom_margin" action="" onsubmit="verifyCode(event)" method="POST">
+								<form id="rsvp-form" class="rsvp-form bottom_margin" action="" onsubmit="verifyCode(event)" method="POST">
 									<!-- <div class="row">
 										<div class="col-md-6 col-sm-6">
 											<div class="form-input-group">
@@ -362,7 +362,7 @@
 										<!-- <div class="col-md-6 col-sm-6"> -->
 											<div class="form-input-group">
 												<i class="fa fa-key"></i>
-												<input type="number" name="invite_code" id="invite_code" class="" min="000000" placeholder="RSVP code" required>
+												<input type="number" name="invite_code" id="invite_code" class="" min="0" placeholder="RSVP code" required>
 											</div>
 										<!-- </div> -->
 									</div>
@@ -374,84 +374,95 @@
 									</button>
 								</form>
 								<div id="response_message" class="animate-box bottom_margin"></div>
+								<div id="rsvp_yes_calendar" class = "animate-box bottom_margin">
+									<p>Add the wedding to your calendar below.</p>
+									<p><a title="Add to Calendar" class="addeventatc" data-id="Xx23572232" href="https://www.addevent.com/event/Xx23572232" target="_blank">Add to Calendar</a> <script type="text/javascript" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script></p>
+								</div>
 								<form id="rsvpDetailsForm" class="rsvp-form animate-box text-center bottom_margin" onsubmit="submitRsvp(event)">
-									<div class="event-wrap animate-box">
-										<h3>Additional Invitation Information</h3>
+									<div class="event-wrap">
+										<h3 style="color: #646464; font-family: 'Work Sans', Arial, sans-serif;">Additional Invitation Information</h3>
 									</div>
-									<div class="col-md-10 col-md-offset-1 animate-box" style="margin-left: 10%; margin-right: 10%;">
-										<div id="information_message" class="animate-box bottom_margin"></div>
-									</div>
+									<img src="images/separator.png" class="separator">
+									<div id="information_message" class="invitation-style" style="display: none;"></div>
+									<img src="images/separator.png" class="separator" style="transform: rotate(180deg);">
+
 									<div id="radio_buttons">
-										<input type="radio" id="rsvp_yes" name="rsvp" class="bottom_margin" value="Yes" required onclick="toggleRequiredField()"> Yes <span>|</span>
-										<input type="radio" id="rsvp_no" name="rsvp" class="bottom_margin" value="No" required onclick="toggleRequiredField()"> No<br>
+										<button class="toggle-button" id="rsvp_yes" value="Yes" onclick="toggleRequiredField(this)">Yes</button>
+										<!-- <span style='font-family:  "Work Sans", Arial, sans-serif; font-size: 20px; font-weight: normal;'>RSVP</span> -->
+										<button class="toggle-button" id="rsvp_no" value="No" onclick="toggleRequiredField(this)">No</button>
+										<input type="hidden" id="rsvp" name="rsvp" value="">
+										<!-- <input type="radio" id="rsvp_yes" name="rsvp" class="bottom_margin" value="Yes" required onclick="toggleRequiredField()"> Yes <span>|</span> -->
+										<!-- <input type="radio" id="rsvp_no" name="rsvp" class="bottom_margin" value="No" required onclick="toggleRequiredField()"> No<br> -->
 									</div><br><br>
 									<!-- <i class="icon-divider"></i><br> -->
-									<input type="text" id="full_name" name="full_name" placeholder="Your Full Name" required class="bottom_margin animate-box"><br>
-									<input type="email" id="email" name="email" placeholder="Your Email" required class="bottom_margin animate-box"><br>
-									<input type="phone" id="phone" name="phone" placeholder="Your Phone" required class="bottom_margin animate-box"><br>
+									<input type="text" id="full_name" name="full_name" placeholder="Your Full Name" required class="bottom_margin"><br>
+									<input type="email" id="email" name="email" placeholder="Your Email" required class="bottom_margin"><br>
+									<input type="phone" id="phone" name="phone" placeholder="Your Phone" required class="bottom_margin"><br>
 
 									<!-- <div id="guests"></div> -->
-									
-									<div id="checkbox0" class="row">
-										<input type="checkbox" id="invited_0" name="invited_0" class="bottom_margin animate-box" value="Selected" onclick="showForm(this)">
-										<label for="invited_0" class="bottom_margin animate-box" ></label>
-										<div id="checkbox0-1" class="animate-box" >
-											<input type="text" id="name0" name="name0" placeholder="Full Name" class="bottom_margin animate-box">
-											<input type="email" id="email0" name="email0" placeholder="Guest Email (optional)" class="bottom_margin">
-											<input type="phone" id="phone0" name="phone0" placeholder="Guest Phone (optional)" class="bottom_margin"><br>
+									<div class="checkboxes">
+										<div id="checkbox0" class="row">
+											<input type="checkbox" id="invited_0" name="invited_0" value="Selected" onclick="showForm(this)">
+											<label id="label0" for="invited_0" class="bottom_margin" ></label>
+											<div id="checkbox0-1">
+												<input type="text" id="name0" name="name0" placeholder="Full Name" class="bottom_margin">
+												<input type="email" id="email0" name="email0" placeholder="Guest Email (optional)" class="bottom_margin">
+												<input type="phone" id="phone0" name="phone0" placeholder="Guest Phone (optional)" class="bottom_margin"><br>
+											</div>
 										</div>
-									</div>
-									<div id="checkbox1" class="row">
-										<input type="checkbox" id="invited_1" name="invited_1" class="bottom_margin animate-box" value="Selected" onclick="showForm(this)">
-										<label for="invited_1" class="bottom_margin animate-box" ></label>
-										<div id="checkbox1-1" class="animate-box">
-											<input type="text" id="name1" name="name1" placeholder="Full Name" class="bottom_margin animate-box">
-											<input type="email" id="email1" name="email1" placeholder="Guest Email (optional)" class="bottom_margin">
-											<input type="phone" id="phone1" name="phone1" placeholder="Guest Phone (optional)" class="bottom_margin"><br>
+										<div id="checkbox1" class="row">
+											<input type="checkbox" id="invited_1" name="invited_1" class="bottom_margin" value="Selected" onclick="showForm(this)">
+											<label id="label1" for="invited_1" class="bottom_margin" ></label>
+											<div id="checkbox1-1">
+												<input type="text" id="name1" name="name1" placeholder="Full Name" class="bottom_margin">
+												<input type="email" id="email1" name="email1" placeholder="Guest Email (optional)" class="bottom_margin">
+												<input type="phone" id="phone1" name="phone1" placeholder="Guest Phone (optional)" class="bottom_margin"><br>
+											</div>
 										</div>
-									</div>
-									<div id="checkbox2" class="row">
-										<input type="checkbox" id="invited_2" name="invited_2" class="bottom_margin animate-box" value="Selected" onclick="showForm(this)">
-										<label for="invited_2" class="bottom_margin animate-box" ></label>
-										<div id="checkbox2-1" class="animate-box">
-											<input type="text" id="name2" name="name2" placeholder="Full Name" class="bottom_margin animate-box">
-											<input type="email" id="email2" name="email2" placeholder="Guest Email (optional)" class="bottom_margin">
-											<input type="phone" id="phone2" name="phone2" placeholder="Guest Phone (optional)" class="bottom_margin"><br>
+										<div id="checkbox2" class="row">
+											<input type="checkbox" id="invited_2" name="invited_2" class="bottom_margin" value="Selected" onclick="showForm(this)">
+											<label id="label2" for="invited_2" class="bottom_margin" ></label>
+											<div id="checkbox2-1">
+												<input type="text" id="name2" name="name2" placeholder="Full Name" class="bottom_margin">
+												<input type="email" id="email2" name="email2" placeholder="Guest Email (optional)" class="bottom_margin">
+												<input type="phone" id="phone2" name="phone2" placeholder="Guest Phone (optional)" class="bottom_margin"><br>
+											</div>
 										</div>
-									</div>
-									<div id="checkbox3" class="row">
-										<input type="checkbox" id="invited_3" name="invited_3" class="bottom_margin animate-box" value="Selected" onclick="showForm(this)">
-										<label for="invited_3" class="bottom_margin animate-box" ></label>
-										<div id="checkbox3-1" class="animate-box">
-											<input type="text" id="name3" name="name3" placeholder="Full Name" class="bottom_margin animate-box">
-											<input type="email" id="email3" name="email3" placeholder="Guest Email (optional)" class="bottom_margin">
-											<input type="phone" id="phone3" name="phone3" placeholder="Guest Phone (optional)" class="bottom_margin"><br>
+										<div id="checkbox3" class="row">
+											<input type="checkbox" id="invited_3" name="invited_3" class="bottom_margin" value="Selected" onclick="showForm(this)">
+											<label id="label3" for="invited_3" class="bottom_margin" ></label>
+											<div id="checkbox3-1">
+												<input type="text" id="name3" name="name3" placeholder="Full Name" class="bottom_margin">
+												<input type="email" id="email3" name="email3" placeholder="Guest Email (optional)" class="bottom_margin">
+												<input type="phone" id="phone3" name="phone3" placeholder="Guest Phone (optional)" class="bottom_margin"><br>
 
+											</div>
 										</div>
-									</div>
-									<div id="checkbox4" class="row">
-										<input type="checkbox" id="invited_4" name="invited_4" class="bottom_margin animate-box" value="Selected" onclick="showForm(this)">
-										<label for="invited_4" class="bottom_margin animate-box" ></label>
-										<div id="checkbox4-1" class="animate-box">
-											<input type="text" id="name4" name="name4" placeholder="Full Name" class="bottom_margin animate-box">
-											<input type="email" id="email4" name="email4" placeholder="Guest Email (optional)" class="bottom_margin">
-											<input type="phone" id="phone4" name="phone4" placeholder="Guest Phone (optional)" class="bottom_margin"><br>
+										<div id="checkbox4" class="row">
+											<input type="checkbox" id="invited_4" name="invited_4" class="bottom_margin" value="Selected" onclick="showForm(this)">
+											<label id="label4" for="invited_4" class="bottom_margin" ></label>
+											<div id="checkbox4-1">
+												<input type="text" id="name4" name="name4" placeholder="Full Name" class="bottom_margin">
+												<input type="email" id="email4" name="email4" placeholder="Guest Email (optional)" class="bottom_margin">
+												<input type="phone" id="phone4" name="phone4" placeholder="Guest Phone (optional)" class="bottom_margin"><br>
+											</div>
 										</div>
-									</div>
-									<div id="checkbox5" class="row">
-										<input type="checkbox" id="invited_5" name="invited_5" class="bottom_margin animate-box" value="Selected" onclick="showForm(this)">
-										<label for="invited_5" class="bottom_margin animate-box" ></label>
-										<div id="checkbox5-1" class="animate-box">
-											<input type="text" id="name5" name="name5" placeholder="Full Name" class="bottom_margin animate-box">
-											<input type="email" id="email5" name="email5" placeholder="Guest Email (optional)" class="bottom_margin">
-											<input type="phone" id="phone5" name="phone5" placeholder="Guest Phone (optional)" class="bottom_margin"><br>
+										<div id="checkbox5" class="row">
+											<input type="checkbox" id="invited_5" name="invited_5" class="bottom_margin" value="Selected" onclick="showForm(this)">
+											<label id="label5" for="invited_5" class="bottom_margin" ></label>
+											<div id="checkbox5-1">
+												<input type="text" id="name5" name="name5" placeholder="Full Name" class="bottom_margin">
+												<input type="email" id="email5" name="email5" placeholder="Guest Email (optional)" class="bottom_margin">
+												<input type="phone" id="phone5" name="phone5" placeholder="Guest Phone (optional)" class="bottom_margin"><br>
+											</div>
 										</div>
 									</div>
 
 
 									<br><button type="submit" class="bottom_margin">Submit RSVP</button>
 								</form>
-								<div id="submit_message" class="animate-box bottom_margin"></div>
+								<div id="submit_message" class="bottom_margin"></div>
+								
 								
 							</div>
 							
@@ -508,6 +519,29 @@
 
 	</div> -->
 
+
+	<div id="fh5co-registry" class="fh5co-bg">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2>Registry</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="display-t">
+					<div class="display-tc">
+						<div class="col-md-10 col-md-offset-1 animate-box text-center" style="margin-left: 10%; margin-right: 10%;">
+							<!-- <p> -->
+								<i><strong>Coming soon! Check back later.</strong></i>
+							<!-- </p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <div id="fh5co-gallery" class="fh5co-section-gray">
     <div class="container">
         <div class="row">
@@ -520,7 +554,7 @@
                 <ul id="fh5co-gallery-list">
 
                     <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/engagement1.jpg);">
-                        <a href="images/engagement1.jpg">
+                        <a href="images/engagement.jpg">
                             <div class="case-studies-summary"></div>
                         </a>
                     </li>
