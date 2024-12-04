@@ -1887,12 +1887,14 @@ form label {
 #checkbox3,
 #checkbox4,
 #checkbox5,
+#checkbox6,
 #checkbox0-1,
 #checkbox1-1,
 #checkbox2-1,
 #checkbox3-1,
 #checkbox4-1,
 #checkbox5-1,
+#checkbox6-1,
 #information_message,
 #full_name,
 #email,
@@ -1903,6 +1905,7 @@ form label {
 #name3,
 #name4,
 #name5,
+#name6,
 #rsvp_yes,
 #rsvp_yes_calendar,
 #rsvp_no,
@@ -2001,7 +2004,8 @@ form label {
 #label2,
 #label3,
 #label4,
-#label5 {
+#label5,
+#label6 {
   font-family: 'Great Vibes', cursive;
   font-weight: bold;
   font-size: 40px;
