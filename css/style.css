@@ -2059,6 +2059,10 @@ input[type="checkbox"]:hover {
   pointer-events: none; 
 }
 
+input:user-invalid {
+  border: 2px solid red;
+}
+
 /* #rsvp_yes {
   border-radius: 0px 0px 0px 10px;
   border-right: solid 1px #cc919a;
