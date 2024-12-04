@@ -13,6 +13,7 @@ const validHashes = [
     '29e56673f1adaae93eff7e65171309b7',
     '96bb83ea44207149a01c72c27eba1be4',
     'f7b746c5f3d07468fcbc283f2cf53f70',
+    '61eac705d9d60674c7fe625ed115f3d4',
     '7e53d38432bd60297d933a008630f396',
     '889d58a2589a1bb98a9e7f04c9b200d0',
     'd78ee9d469078ad941cf0a0db58e0c7c',
@@ -71,6 +72,8 @@ async function submitRsvp(event) {
     
     if (!document.getElementById('rsvp').value) {
         document.getElementById('submit_message').innerHTML = '<strong>Error!</strong> Please make an RSVP selection using the buttons above.';
+        document.getElementById('rsvp_yes').style.border = "2px solid red";
+        document.getElementById('rsvp_no').style.border = "2px solid red";
         return;
     }
 
