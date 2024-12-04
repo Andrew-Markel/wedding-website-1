@@ -163,14 +163,15 @@ async function toggleRequiredField(button) {
     var rsvp_yes = document.getElementById('rsvp_yes');
     // var inputField1 = document.getElementById('full_name');
     var inputField = document.getElementById('phone');
+    var inputField2 = document.getElementById('email');
 
     // If "Yes" is selected, make the input field required
     if (rsvp_yes.className.includes('active')) {
         inputField.required = true;
-        // inputField2.required = true;
+        inputField2.required = true;
     } else {
         inputField.required = false;
-        // inputField2.required = false;
+        inputField2.required = false;
     }
 }
 
