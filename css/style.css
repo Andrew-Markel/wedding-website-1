@@ -33,15 +33,14 @@ body {
 
 
 #fh5co-header {
-  background-image: url(images/mountain1.jpg);
   /* background-size: 110%; Increase this value to zoom out further */
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-  height: 126vh; /* Adjust this value to increase height, e.g., 120vh for taller */
-  position: center;
-  overflow: hidden;
+  /* background-size: auto 110vh; */
+  /*height: 110vh;*/ /* Adjust this value to increase height, e.g., 120vh for taller */
+  /* position: center; */
+  overflow-x: hidden;
 }
-
 
 .offcanvas #page {
   overflow: hidden;
@@ -245,18 +244,21 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-registry,
 #fh5co-rsvp
 .fh5co-bg {
-  background-size: cover;
-  background-position: top center;
+  /* background-size: cover; */
+  background-size: auto 100vh;
+  background-position: center center;
   background-repeat: no-repeat;
   position: relative;
+  overflow-x: hidden;
+  /* transform: translateX(-50%); */
 }
 
-.fh5co-bg {
+/* .fh5co-bg {
   background-position: center center;
   width: 100%;
   float: left;
   position: relative;
-}
+} */
 
 .fh5co-video {
   height: 450px;
@@ -316,10 +318,12 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-cover {
-  height: 1000px;
+  height: 110vh;
   background-size: cover;
   background-repeat: no-repeat;
-  position: center;
+  background-position: center center; 
+  overflow-x: hidden; 
+  /* position: center; */
   width: 100%;
   /* min-width:100%; min-height:100%; width:auto; height:auto; 
   max-width:100%;
@@ -336,6 +340,7 @@ h1, h2, h3, h4, h5, h6, figure {
   right: 0;
   background: rgba(147, 147, 147, 0.5);
 } */
+
 .fh5co-cover > .fh5co-container {
   position: relative;
   z-index: 10;
@@ -1904,7 +1909,7 @@ form label {
 #name4,
 #name5,
 #rsvp_yes,
-#rsvp_yes_calendar,
+/* #rsvp_yes_calendar, */
 #rsvp_no,
 #radio_buttons {
   display: none; /* Hidden by default  */
@@ -2054,6 +2059,14 @@ input[type="checkbox"]:hover {
 /* input[type="checkbox"]:focus { */
   /* outline: 3px solid #4e4e4e; Highlight when focused */
 /* } */
+
+#fh5co-registry {
+  pointer-events: none; 
+}
+
+input:user-invalid {
+  border: 2px solid red;
+}
 
 /* #rsvp_yes {
   border-radius: 0px 0px 0px 10px;

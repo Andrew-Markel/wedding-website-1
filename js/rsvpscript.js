@@ -15,7 +15,7 @@ async function verifyCode(event) {
 
     if (validHashes.includes(hashedCode)) {
         // Show the additional details form if the invite code is correct
-        document.getElementById('response_message').innerHTML = "<strong>Validating...</strong> One moment please.";
+        document.getElementById('response_message').innerHTML = "<strong>Validating...</strong> One moment, please.";
         await getSheetsApi(inviteCodeInput);
         document.getElementById('rsvpDetailsForm').style.display = 'block';
         document.getElementById('response_message').innerHTML = "<strong>Code validated!</strong> Please provide additional details below.";
