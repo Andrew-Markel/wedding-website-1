@@ -44,6 +44,7 @@ const validHashes = [
     'cde96b85179d99718f4a8e2b729a9408',
     'd0583f8267534ab35e65527140dcb0e6'
 ];
+const baseURL = "https://script.google.com/macros/s/AKfycbx9WA8r0hZhOtelVODzHbtMl41xtQyPukvolPbiTIhWkr56rRpxTmezAYYxce9WNEhiGg/exec";
 
 async function verifyCode(event) {
     event.preventDefault();
@@ -150,7 +151,7 @@ async function getSheetsApi(inviteCodeInput) {
         document.getElementById('radio_buttons').style.display = 'inline-flex';
     } 
     // document.getElementById('response_message').innerHTML = `<strong>Success!</strong> Please provide additional details below.`;
-    var invites = [jsonData.invited_0.toString(),jsonData.invited_1.toString(),jsonData.invited_2.toString(),jsonData.invited_3.toString(),jsonData.invited_4.toString(),jsonData.invited_5.toString()];
+    var invites = [jsonData.invited_0.toString(),jsonData.invited_1.toString(),jsonData.invited_2.toString(),jsonData.invited_3.toString(),jsonData.invited_4.toString(),jsonData.invited_5.toString(),jsonData.invited_6.toString()];
     for (var i = 0; i < parseInt(jsonData.number_invited); i++) {
         if (invites[i] !== "" && invites[i] !== undefined) {
             // document.getElementById('guests').innerHTML = document.getElementById('guests').innerHTML +
@@ -177,7 +178,7 @@ async function getSheetsApi(inviteCodeInput) {
 
 async function getData(inviteCodeInput) {
     try {
-      const response = await fetch(`https://script.google.com/macros/s/AKfycbz65do3EHVPiFxieUssjqWaIwE9RcTNmQiHzWEGf4_LJC-1lmHX1D2oN8N78jNMuGRoOw/exec?invite_code=${inviteCodeInput.toString()}`);
+      const response = await fetch(`${baseURL}?invite_code=${inviteCodeInput.toString()}`);
       if (!response.ok) {
         throw new Error('Network response was not ok ' + response.statusText);
       }
@@ -241,7 +242,7 @@ function showForm(checkbox) {
 async function postSheetsApi(inviteCodeInput, data) {
     const queryString = new URLSearchParams(data).toString();
     try {
-        const response = await fetch(`https://script.google.com/macros/s/AKfycbz65do3EHVPiFxieUssjqWaIwE9RcTNmQiHzWEGf4_LJC-1lmHX1D2oN8N78jNMuGRoOw/exec?${queryString}`, {
+        const response = await fetch(`${baseURL}?${queryString}`, {
             method: 'POST',
         });
 
