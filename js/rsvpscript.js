@@ -2,7 +2,46 @@
 const validHashes = [
     // '5d41402abc4b2a76b9719d911017c592', // Example hash for "hello"
     // '098f6bcd4621d373cade4e832627b4f6',  // Example hash for "test"
-    'c4ca4238a0b923820dcc509a6f75849b'
+    'e10adc3949ba59abbe56e057f20f883e',
+    '0649da1a8d95c452067cccd8a046b793',
+    '1e97fe1dc44100469eb2e91b3dba7b76',
+    'c3e109f833f540298eb3d2629d0ba27d',
+    '5347ffec74fbd2f6b8b2928304cf22c9',
+    '2040316e990814c79fbf262fed7312a1',
+    '5f3b9ea25e2570a5d8dc2942d6e376a1',
+    '5f49072249e558992cff7ba8ed1d997e',
+    '29e56673f1adaae93eff7e65171309b7',
+    '96bb83ea44207149a01c72c27eba1be4',
+    'f7b746c5f3d07468fcbc283f2cf53f70',
+    '7e53d38432bd60297d933a008630f396',
+    '889d58a2589a1bb98a9e7f04c9b200d0',
+    'd78ee9d469078ad941cf0a0db58e0c7c',
+    'ca535a8a39ab16532e8a17f51f852e13',
+    'ad65dd2980c916723fda51d6123ae6e7',
+    'c197db31c5fbfd49fd80748c1e4cc841',
+    'b29a2a3c60be46649d171b5c2962b0fc',
+    '258f60ff9a736cbec0f553d4ab3dd2c1',
+    '31de309a83373e043ed8d067430efa1b',
+    '382f70b705ac174e3f3a38c813e6ed95',
+    'e607ab3a7c551effca521c09b8b50e45',
+    '269b98a598036d48ca6c2bd7f18b287d',
+    '996ef461dd6c09f1747f1508278076a5',
+    'bfe67cf2e2349bc5ae0b802f37d70305',
+    '6f88440bbf4c1f684f6883f623cd6ea4',
+    '2505c2449554d7dbbdf76cbf51a2ec96',
+    '50ab128b29580cf9c5ad718c7181664a',
+    '3d4c982b7c9eac940875e2ac101f6125',
+    'f9941680c2a483a4df6cd11b845086d4',
+    'f0977c9c8736b90d764a19f8d57cc1fa',
+    'e3dfcf760e1e3c0bdebcc9775265c15f',
+    'a061f2a93b1d3c6d52f2a33813d9872f',
+    '31165517951d2714c8dbccaa8408b476',
+    'a6b7f92169be71e7728741911390fee6',
+    '551ed2c20937885b2dcb409fde1b4b50',
+    '7dabaa6e2a2a3eb81ef742a8df0cab59',
+    'aea9b328a222092e30163f678ebe4d29',
+    'cde96b85179d99718f4a8e2b729a9408',
+    'd0583f8267534ab35e65527140dcb0e6'
 ];
 
 async function verifyCode(event) {
@@ -135,7 +174,7 @@ async function getSheetsApi(inviteCodeInput) {
 
 async function getData(inviteCodeInput) {
     try {
-      const response = await fetch(`https://script.google.com/macros/s/AKfycbyIxbUTQmaqFIRzTCkpBYBkGYSLNPjLxxcb0z-rzGaDiTc3nK_v_aMSqdH_gUbd24pQ/exec?invite_code=${inviteCodeInput.toString()}`);
+      const response = await fetch(`https://script.google.com/macros/s/AKfycbz65do3EHVPiFxieUssjqWaIwE9RcTNmQiHzWEGf4_LJC-1lmHX1D2oN8N78jNMuGRoOw/exec?invite_code=${inviteCodeInput.toString()}`);
       if (!response.ok) {
         throw new Error('Network response was not ok ' + response.statusText);
       }
@@ -199,7 +238,7 @@ function showForm(checkbox) {
 async function postSheetsApi(inviteCodeInput, data) {
     const queryString = new URLSearchParams(data).toString();
     try {
-        const response = await fetch(`https://script.google.com/macros/s/AKfycbyIxbUTQmaqFIRzTCkpBYBkGYSLNPjLxxcb0z-rzGaDiTc3nK_v_aMSqdH_gUbd24pQ/exec?${queryString}`, {
+        const response = await fetch(`https://script.google.com/macros/s/AKfycbz65do3EHVPiFxieUssjqWaIwE9RcTNmQiHzWEGf4_LJC-1lmHX1D2oN8N78jNMuGRoOw/exec?${queryString}`, {
             method: 'POST',
         });
 
