@@ -42,7 +42,13 @@ const validHashes = [
     '7dabaa6e2a2a3eb81ef742a8df0cab59',
     'aea9b328a222092e30163f678ebe4d29',
     'cde96b85179d99718f4a8e2b729a9408',
-    'd0583f8267534ab35e65527140dcb0e6'
+    'd0583f8267534ab35e65527140dcb0e6',
+    '39c9d87c27d8bd16ec4ded67f505c183',
+    '8bcfbc26d831529e09043d0b0e0c46d8',
+    '35793632bb32471b397a85226d7ca9b0',
+    'ddfeea385b89a72fff0e177662bbe746',
+    '273ff30af54cac51ba17a84f78567e01',
+    '9e721679a24d6f2aca8dbff87d3f2a53'
 ];
 const baseURL = "https://script.google.com/macros/s/AKfycbx9WA8r0hZhOtelVODzHbtMl41xtQyPukvolPbiTIhWkr56rRpxTmezAYYxce9WNEhiGg/exec";
 
