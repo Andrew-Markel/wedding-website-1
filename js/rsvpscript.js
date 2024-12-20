@@ -2,6 +2,7 @@
 const validHashes = [
     // '5d41402abc4b2a76b9719d911017c592', // Example hash for "hello"
     // '098f6bcd4621d373cade4e832627b4f6',  // Example hash for "test"
+    '20d5461a6abf0a9fed2cc3d2ea106080',
     'e10adc3949ba59abbe56e057f20f883e',
     '0649da1a8d95c452067cccd8a046b793',
     '1e97fe1dc44100469eb2e91b3dba7b76',
