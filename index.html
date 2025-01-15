@@ -549,8 +549,19 @@
 					<div class="display-tc">
 						<div class="col-md-10 col-md-offset-1 animate-box text-center" style="margin-left: 10%; margin-right: 10%;">
 							<!-- <p> -->
-								<i><strong>Coming soon! Check back later.</strong></i>
-							<!-- </p> -->
+								<!-- <i><strong>Coming soon! Check back later.</strong></i> -->
+								<div id="tab" onclick="toggleIframe()"><span id='tab-text'>Show Registry</span><span id='arrow'>&#9660;</span></div>
+								<div id="iframe-container">
+									<iframe src="https://withjoy.com/andrew-and-emma-aug-25/registry" scrolling="yes" class="animate-box" allow="scripts" sandbox="allow-scripts allow-same-origin">
+										<p>Your browser does not support iframes.</p>
+									</iframe>
+								</div>
+								<!-- <div style="overflow-y: hidden; border: 2px solid black; width: 300px; height: 300px; position:absolute; left: 100px; top: 100px">
+									<div style="margin-top: -100px; width: 300px; height: 400px">
+										<iframe style='pointer-events: none; width:100%; height: 100%' src="https://earth.nullschool.net/#current/wind/surface/level/orthographic=-325.19,32.21,3000/loc=35.073,31.923" frameborder="0" type="text/html"></iframe>
+									</div> 
+								</div>  -->
+								<!-- </p> -->
 						</div>
 					</div>
 				</div>
@@ -624,6 +635,7 @@
 	<!-- <center>View Source Code on <a href="https://github.com/shyamjos/wedding-website">GitHub <img src="images/github-logo.png"> </a> </center> -->
 	<!-- RSVP Script -->
 	<script src="js/rsvpscript.js" defer></script>
+	<script src="js/iframe.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 	</body>
 </html>

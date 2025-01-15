@@ -2059,12 +2059,42 @@ input[type="checkbox"]:hover {
   /* outline: 3px solid #4e4e4e; Highlight when focused */
 /* } */
 
-#fh5co-registry {
+/* #fh5co-registry {
   pointer-events: none; 
-}
+} */
 
 input:user-invalid {
   border: 2px solid red;
+}
+
+iframe {
+  width: 100%; /* Span most of the page horizontally */
+  height: 90vh; /* Adjusts height to fit most of the viewport */
+  border: none; /* Remove default border */
+  overflow: auto;
+  pointer-events: auto; 
+}
+
+#tab {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#tab span {
+  margin-left: auto;
+}
+
+#iframe-container {
+  display: none; /* Hidden by default */
+  width: 100%;
 }
 
 /* #rsvp_yes {
