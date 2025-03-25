@@ -231,3 +231,23 @@
 
 }());
 
+// document.getElementById('registry').addEventListener('click', function() {
+// 	window.open('https://withjoy.com/andrew-and-emma-aug-8/registry', '_blank');
+// });
+
+
+// const iframe = document.getElementById("registryIframe");
+//     const overlay = document.getElementById("registryOverlay");
+
+//     iframe.addEventListener("mouseenter", () => {
+//         overlay.style.pointerEvents = "none"; // Disable overlay when inside iframe
+//     });
+
+//     iframe.addEventListener("mouseleave", () => {
+//         overlay.style.pointerEvents = "auto"; // Re-enable overlay when outside iframe
+//     });
+
+
+document.getElementById("registryIframe").addEventListener("click", function() {
+	window.open("https://withjoy.com/andrew-and-emma-aug-8/registry", "_blank");
+});
