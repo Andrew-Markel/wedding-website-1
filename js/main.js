@@ -248,6 +248,6 @@
 //     });
 
 
-document.getElementById("registryIframe").addEventListener("click", function() {
-	window.open("https://withjoy.com/andrew-and-emma-aug-8/registry", "_blank");
-});
+// document.getElementById("registryIframe").addEventListener("click", function() {
+// 	window.open("https://withjoy.com/andrew-and-emma-aug-8/registry", "_blank");
+// });
