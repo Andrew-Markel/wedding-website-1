@@ -2,7 +2,7 @@ const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
-const targetUrl = 'https://withjoy.com/andrew-and-emma-aug-25/registry'; // The URL of the external server you want to proxy
+const targetUrl = 'https://withjoy.com/andrew-and-emma-aug-8/registry'; // The URL of the external server you want to proxy
 
 // Proxy any request to the target URL
 app.use('/proxy', createProxyMiddleware({
