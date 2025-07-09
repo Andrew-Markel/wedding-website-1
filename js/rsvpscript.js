@@ -52,7 +52,9 @@ const validHashes = [
     '9e721679a24d6f2aca8dbff87d3f2a53',
     '3d423efc6558173d7ff8bb5f31232980',
     'c5d6dc3e388699233cb4d6e0582b3bf7',
-    '720533e08903cad49bfec0d88925b624'
+    '720533e08903cad49bfec0d88925b624',
+    '73b93c10e408a0ad580ed981428afb6b',
+    'cdc2ffd9b00f20610a51d889df149189'
 ];
 const baseURL = "https://script.google.com/macros/s/AKfycbx9WA8r0hZhOtelVODzHbtMl41xtQyPukvolPbiTIhWkr56rRpxTmezAYYxce9WNEhiGg/exec";
 
